@@ -1,0 +1,21 @@
+@import "tailwindcss";
+.something::before {
+    content: '';
+    position: absolute;
+    left: -25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    height: 6.5%;
+    right: 10%;
+}
+.something::after {
+    content: '';
+    position: absolute;
+    right: -23rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    height: 6.5%;
+    left: 50%;
+}   

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <!-- <link rel="" href="script.js"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="h-screen bg-black overflow-hidden">
+      <header class="flex justify-between">
+        <input
+          style="font-family: &quot;Press Start 2P&quot;"
+          class="bg-white/90 w-49 h-16 m-6"
+          type="button"
+          value="Again!"
+        />
+        <p
+          style="font-family: &quot;Press Start 2P&quot;"
+          class="self-center text-white m-6"
+        >
+          &lt;Between 1 and 20&gt;
+        </p>
+      </header>
+      <div>
+        <p
+          style="font-family: &quot;Press Start 2P&quot;"
+          class="m-6 text-white text-center text-[40px]"
+        >
+          Guess My Number!
+        </p>
+      </div>
+      <div
+        class="something m-auto w-37 h-30 bg-white relative flex items-center justify-center"
+      >
+        <span style="font-family: &quot;Press Start 2P&quot;" class="text-7xl"
+          >?</span
+        >
+      </div>
+      <div
+        class="text-white flex justify-around my-25"
+        style="font-family: &quot;Press Start 2P&quot;"
+      >
+        <div class="flex flex-col justify-center">
+          <input
+            type="number"
+            class="border-4 block w-60 h-28 text-white text-center text-3xl"
+          />
+          <input type="button" class="block text-2xl" value="Check!" />
+        </div>
+        <div class="">
+          <p>Start guessing...</p>
+          <p>💯 Score: 20</p>
+          <p>🥇 Highscore: 0</p>
+        </div>
+      </div>
+    </div>
+    <script src="number.js"></script>
+  </body>
+</html>
