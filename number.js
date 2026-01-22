@@ -1,2 +1,1 @@
-console.log("i have something");
-let something = "something is very dangerous";
+document.querySelector(".huys").textContent = "i need it very bbad mate";
