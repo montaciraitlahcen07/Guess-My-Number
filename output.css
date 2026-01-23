@@ -172,24 +172,6 @@
   .relative {
     position: relative;
   }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
   .m-6 {
     margin: calc(var(--spacing) * 6);
   }
@@ -199,14 +181,29 @@
   .my-21 {
     margin-block: calc(var(--spacing) * 21);
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
   .mt-11 {
     margin-top: calc(var(--spacing) * 11);
   }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
+  .mb-21 {
+    margin-bottom: calc(var(--spacing) * 21);
   }
   .mb-22 {
     margin-bottom: calc(var(--spacing) * 22);
@@ -217,14 +214,23 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .table {
     display: table;
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
   }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-28 {
     height: calc(var(--spacing) * 28);
@@ -247,6 +253,12 @@
   .w-65 {
     width: calc(var(--spacing) * 65);
   }
+  .w-68 {
+    width: calc(var(--spacing) * 68);
+  }
+  .min-w-max {
+    min-width: max-content;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -255,6 +267,15 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -270,6 +291,12 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .self-center {
     align-self: center;
@@ -297,6 +324,9 @@
       background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
     }
   }
+  .pb-22 {
+    padding-bottom: calc(var(--spacing) * 22);
+  }
   .text-center {
     text-align: center;
   }
@@ -317,6 +347,9 @@
   }
   .text-\[40px\] {
     font-size: 40px;
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-black {
     color: var(--color-black);
@@ -340,7 +373,7 @@
   transform: translateY(-50%);
   background-color: white;
   height: 6.5%;
-  right: 10%;
+  right: 1%;
 }
 .something::after {
   content: "";
@@ -350,7 +383,7 @@
   transform: translateY(-50%);
   background-color: white;
   height: 6.5%;
-  left: 50%;
+  left: 1%;
 }
 @property --tw-rotate-x {
   syntax: "*";

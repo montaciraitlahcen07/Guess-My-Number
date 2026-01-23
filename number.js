@@ -8,12 +8,11 @@ let hightscore = 0;
 // document.querySelector(".highscore").textContent = hightscore;
 document.querySelector(".btn").addEventListener("click", function () {
   let value = document.querySelector(".inpt").value;
-  if (value) document.querySelector(".number").textContent = value;
   if (!value)
     document.querySelector(".guessing").textContent = "❌ not a number";
   else if (value == random && score >= 1) {
-    // const elementtochange = document.querySelector(".parent");
-    // elementtochange.style
+    document.querySelector(".number").textContent = value;
+    document.querySelector('.parent').style.backgroundColor = '#60b347';
     document.querySelector(".guessing").textContent = "🎉 the right number";
     if (score > hightscore) hightscore = score;
     document.querySelector(".highscore").textContent = hightscore;
