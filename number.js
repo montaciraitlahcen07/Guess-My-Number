@@ -1,22 +1,22 @@
 "use strict";
 function something() {
-  return parseInt(Math.random() * 20);
+  return parseInt(Math.random() * 21);
 }
 let random = something();
 let score = 20;
 let hightscore = 0;
-// document.querySelector(".highscore").textContent = hightscore;
 document.querySelector(".btn").addEventListener("click", function () {
   let value = document.querySelector(".inpt").value;
   if (!value)
     document.querySelector(".guessing").textContent = "❌ not a number";
   else if (value == random && score >= 1) {
     document.querySelector(".number").textContent = value;
-    document.querySelector('.parent').style.backgroundColor = '#60b347';
+    document.querySelector(".something").style.width = "20rem";
+    document.querySelector(".parent").style.backgroundColor = "#60b347";
     document.querySelector(".guessing").textContent = "🎉 the right number";
     if (score > hightscore) hightscore = score;
     document.querySelector(".highscore").textContent = hightscore;
-  } else if (value > random) {
+  } else if (value !== random) {
     if (score <= 1) {
       document.querySelector(".guessing").textContent =
         "❌ failed all your guess's";
@@ -25,18 +25,7 @@ document.querySelector(".btn").addEventListener("click", function () {
       return 0;
     }
     score--;
-    document.querySelector(".guessing").textContent = "📈 to hight";
-    document.querySelector(".score").textContent = score;
-  } else {
-    if (score <= 1) {
-      document.querySelector(".guessing").textContent =
-        "❌ failed all your guess's";
-      score = 0;
-      document.querySelector(".score").textContent = score;
-      return 0;
-    }
-    score--;
-    document.querySelector(".guessing").textContent = "📉 to low";
+    document.querySelector(".guessing").textContent = value > random  ? "📈 to hight" : "📉 to low";
     document.querySelector(".score").textContent = score;
   }
 });
@@ -47,4 +36,6 @@ document.querySelector(".again").addEventListener("click", function () {
   score = 20;
   document.querySelector(".number").textContent = "?";
   document.querySelector(".score").textContent = score;
+  document.querySelector(".parent").style.backgroundColor = "#222222";
+  document.querySelector(".something").style.width = "148px";
 });

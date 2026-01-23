@@ -6,16 +6,16 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: white;
-  height: 6.5%;
-  right: 1%;
+  height: 7%;
+  right: 100%;
 }
 .something::after {
   content: "";
   position: absolute;
-  right: -23rem;
+  right: -25rem;
   top: 50%;
   transform: translateY(-50%);
   background-color: white;
-  height: 6.5%;
-  left: 1%;
+  height: 7%;
+  left: 100%;
 }
