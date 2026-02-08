@@ -4,77 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess My Number</title>
-    <link rel="stylesheet" href="output.css" />
-    <!-- <link rel="" href="script.js"> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+
+    <link rel="stylesheet" href="output.css" />
+
+    <style>
+      .game-container {
+        font-family: "Press Start 2P", cursive;
+      }
+      input {
+        font-family: inherit;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="parent h-screen bg-[#222222] overflow-hidden">
-      <header class="flex justify-between">
+    <div class="game-container parent h-screen bg-[#222222] overflow-hidden">
+      <header class="flex justify-between p-6">
         <input
-          style="font-family: &quot;Press Start 2P&quot;"
-          class="again bg-white/90 w-49 h-16 m-6"
+          class="again bg-white/90 w-48 h-16 cursor-pointer hover:bg-white transition-colors"
           type="button"
           value="Again!"
         />
-        <p
-          style="font-family: &quot;Press Start 2P&quot;"
-          class="self-center text-white m-6"
-        >
-          &lt;Between 1 and 20&gt;
-        </p>
+        <p class="self-center text-white">&lt;Between 1 and 20&gt;</p>
       </header>
-      <div>
-        <p
-          style="font-family: &quot;Press Start 2P&quot;"
-          class="huys m-6 text-white text-center text-[40px]"
-        >
-          Guess My Number!
-        </p>
-      </div>
-      <div
-        class="something m-auto mt-11 w-37 h-30 bg-white relative flex items-center justify-center"
-      >
-        <span
-          style="font-family: &quot;Press Start 2P&quot;"
-          class="number text-7xl"
-          >?</span
-        >
-      </div>
-      <div
-        class="text-white grid grid-cols-2 gap-8 my-21"
-        style="font-family: &quot;Press Start 2P&quot;"
-      >
-        <div class="flex flex-col justify-center">
-          <input
-            type="number"
-            class="inpt border-4 block w-68 h-28 self-center text-white text-center text-3xl"
-          />
-          <input
-            type="button"
-            class="btn block text-[21px] self-center mt-8 text-black bg-white w-47 h-15"
-            value="Check!"
-          />
-        </div>
-        <div class="">
-          <p class="guessing text-xl h-28">Start guessing...</p>
-          <p class="text-xl mb-5">
-            💯 Score:
-            <span class="score">20</span>
-          </p>
-          <p class="text-xl">
-            🥇 Highscore:
-            <span class="highscore">0</span>
+
+      <main>
+        <div>
+          <p
+            class="huys m-6 text-white text-center text-[40px] leading-relaxed"
+          >
+            Guess My Number!
           </p>
         </div>
-      </div>
+
+        <div
+          class="something m-auto mt-11 w-40 h-32 bg-white relative flex items-center justify-center"
+        >
+          <span class="number text-7xl text-black">?</span>
+        </div>
+        <div
+          class="modal-window absolute bg-black left-1/2 top-1/2 -translate-1/2 w-99 text-center h-60 border-8 border-white hidden"
+        >
+          <div class="p-10 flex flex-col items-center">
+            <h1 class="text-white py-3.5">YOU LOST ALL YOUR TRIES!</h1>
+            <input
+              type="button"
+              class="modal-button bg-white h-14 w-52 mt-2.5"
+              value="PLAY AGAIN!"
+            />
+          </div>
+        </div>
+        <section class="text-white grid grid-cols-2 gap-8 my-21 px-12">
+          <div class="flex flex-col items-center">
+            <input
+              type="number"
+              class="inpt border-4 border-white bg-transparent block w-64 h-28 text-white text-center text-3xl mb-8 focus:outline-none"
+            />
+            <input
+              type="button"
+              class="btn block text-[21px] text-black bg-white w-48 h-16 cursor-pointer hover:bg-gray-200 transition-colors"
+              value="Check!"
+            />
+          </div>
+          <div class="flex flex-col justify-center gap-4">
+            <p class="guessing text-xl h-20">Start guessing...</p>
+            <p class="text-xl">💯 Score: <span class="score">20</span></p>
+            <p class="text-xl">
+              🥇 Highscore: <span class="highscore">0</span>
+            </p>
+          </div>
+        </section>
+      </main>
     </div>
+
     <script src="number.js"></script>
   </body>
 </html>

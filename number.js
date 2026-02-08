@@ -22,10 +22,25 @@ document.querySelector(".btn").addEventListener("click", function () {
         "❌ failed all your guess's";
       score = 0;
       document.querySelector(".score").textContent = score;
+      document.querySelector(".modal-window").classList.remove("hidden");
+      document
+        .querySelector(".modal-button")
+        .addEventListener("click", function () {
+          document.querySelector(".inpt").value = "";
+          document.querySelector(".guessing").textContent = "Start guessing...";
+          random = something();
+          score = 20;
+          document.querySelector(".number").textContent = "?";
+          document.querySelector(".score").textContent = score;
+          document.querySelector(".parent").style.backgroundColor = "#222222";
+          document.querySelector(".something").style.width = "148px";
+          document.querySelector(".modal-window").classList.add("hidden");
+        });
       return 0;
     }
     score--;
-    document.querySelector(".guessing").textContent = value > random  ? "📈 to hight" : "📉 to low";
+    document.querySelector(".guessing").textContent =
+      value > random ? "📈 to hight" : "📉 to low";
     document.querySelector(".score").textContent = score;
   }
 });
