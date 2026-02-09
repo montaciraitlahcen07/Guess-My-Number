@@ -23,17 +23,17 @@ document.querySelector(".btn").addEventListener("click", function () {
       score = 0;
       document.querySelector(".score").textContent = score;
       document.querySelector(".modal-window").classList.remove("hidden");
+      document.querySelector(".window-overlay").classList.remove("hidden");
+      document
+        .querySelector(".window-overlay")
+        .addEventListener("click", function () {
+          document.querySelector(".modal-window").classList.add("hidden");
+          document.querySelector(".window-overlay").classList.add("hidden");
+        });
       document
         .querySelector(".modal-button")
         .addEventListener("click", function () {
-          document.querySelector(".inpt").value = "";
-          document.querySelector(".guessing").textContent = "Start guessing...";
-          random = something();
-          score = 20;
-          document.querySelector(".number").textContent = "?";
-          document.querySelector(".score").textContent = score;
-          document.querySelector(".parent").style.backgroundColor = "#222222";
-          document.querySelector(".something").style.width = "148px";
+          gameReset();
           document.querySelector(".modal-window").classList.add("hidden");
         });
       return 0;
@@ -45,6 +45,9 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 document.querySelector(".again").addEventListener("click", function () {
+  gameReset();
+});
+function gameReset() {
   document.querySelector(".inpt").value = "";
   document.querySelector(".guessing").textContent = "Start guessing...";
   random = something();
@@ -53,4 +56,4 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".score").textContent = score;
   document.querySelector(".parent").style.backgroundColor = "#222222";
   document.querySelector(".something").style.width = "148px";
-});
+}

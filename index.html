@@ -49,18 +49,6 @@
         >
           <span class="number text-7xl text-black">?</span>
         </div>
-        <div
-          class="modal-window absolute bg-black left-1/2 top-1/2 -translate-1/2 w-99 text-center h-60 border-8 border-white hidden"
-        >
-          <div class="p-10 flex flex-col items-center">
-            <h1 class="text-white py-3.5">YOU LOST ALL YOUR TRIES!</h1>
-            <input
-              type="button"
-              class="modal-button bg-white h-14 w-52 mt-2.5"
-              value="PLAY AGAIN!"
-            />
-          </div>
-        </div>
         <section class="text-white grid grid-cols-2 gap-8 my-21 px-12">
           <div class="flex flex-col items-center">
             <input
@@ -83,7 +71,19 @@
         </section>
       </main>
     </div>
-
+    <div class="window-overlay hidden fixed inset-0 bg-black/70 z-40"></div>
+    <div
+      class="modal-window game-container absolute bg-black left-1/2 top-1/2 -translate-1/2 w-99 text-center h-60 border-8 border-white shadow-[0_0_20px_rgba(0,0,0,.8)] hidden z-50"
+    >
+      <div class="p-10 flex flex-col items-center">
+        <h1 class="text-white py-3.5">YOU LOST ALL YOUR TRIES!</h1>
+        <input
+          type="button"
+          class="modal-button bg-white h-14 w-52 mt-2.5"
+          value="PLAY AGAIN!"
+        />
+      </div>
+    </div>
     <script src="number.js"></script>
   </body>
 </html>
